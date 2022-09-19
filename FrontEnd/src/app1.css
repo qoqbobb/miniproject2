@@ -1,0 +1,90 @@
+@font-face {
+    font-family: 'Y_Spotlight';
+    src: url('./fonts/YUniverse-B.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'establishRetrosansOTF';
+    src: url('fonts/establish\ Retrosans.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'NanumSquareRound';
+    src: url('fonts/NanumSquareRoundR.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  
+  
+  #form{
+    font-family:"establishRetrosansOTF" ;
+  }
+  
+  #free{
+    font-family: "Y_Spotlight";
+  }
+  
+  
+   div {
+      
+      color: rgb(0, 0, 0);
+      padding: 0px;
+      font-family: 고딕;
+      text-align: center;
+    } 
+   
+  .list{
+    padding: 100px;
+  }
+  
+  .w-btn-gray-outline{
+    float: right;
+    margin-right: 300px;
+    
+  }
+  
+    
+  h3{
+      color: #000000;
+  }
+  /*
+  .btn{
+      margin: 1em;
+      background-color: blue;
+      color: white;
+      border: none;
+      border-radius: 20px;
+      height: 40px;
+      width: 140px;
+      float: right;
+  }
+  */
+  input {
+      width: 500px;
+      height: 32px;
+      font-size: 15px;
+      border: 0;
+      border-radius: 15px;
+      outline: none;
+      padding-left: 10px;
+      background-color: rgb(233, 233, 233);
+    }
+  
+    textarea {
+      width: 500px;
+      height: 200px;
+      padding: 10px;
+      box-sizing: border-box;
+      border: solid 2px #333638;
+      border-radius: 5px;
+      font-size: 16px;
+      resize: both;
+  }
+  
+  table{
+      color: #000000;
+  }

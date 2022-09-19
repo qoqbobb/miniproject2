@@ -1,0 +1,45 @@
+@font-face {
+    font-family: 'Y_Spotlight';
+    src: url('./fonts/YUniverse-B.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'establishRetrosansOTF';
+    src: url('fonts/establish\ Retrosans.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'NanumSquareRound';
+    src: url('fonts/NanumSquareRoundR.ttf');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .div {
+    
+    color: rgb(255, 255, 255);
+    padding: 80px;
+    font-family: "NanumSquareRound";
+    text-align: center;
+  }
+  
+  .qna {
+    color: white;
+    background-color: #444e5a;
+    padding: 20px;
+    font-family: "establishRetrosansOTF";
+    font-style: italic;
+  }
+  
+  .h2 {
+    color: black;
+    font-family: "establishRetrosansOTF";
+    text-align: left;
+  }
+  
+  .button{
+    font-size: large;
+  }
