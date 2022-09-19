@@ -138,11 +138,105 @@ const {data} = props;
     </Table>
 ~~~
 
+### 리스트 구현 
+<div>
+  <img src="https://user-images.githubusercontent.com/19407579/69789626-44b36c80-1204-11ea-94ac-d53cf39954ff.gif">
+</div>
+<br>
+
+### update.js: 수정 페이지
+~~~JavaScript
+const Update = (props) =>{
+    const id = props.match.params.id;
+
+    const[free, setFree] = useState({
+        title:'',
+        writer:'',
+        content:'',
+    });
+
+    useEffect(() =>{
+        fetch('http://localhost:9008/view/'+id)
+        .then((res) => res.json())
+        .then((res) =>{
+            setFree(res);
+        });
+    }, []);
+
+    const changeValue = (e) =>{
+        setFree({
+            ...free,
+            [e.target.name]: e.target.value,
+        });
+    };
+
+    const submitFree = (e) =>{
+        e.preventDefault();
+
+        fetch('http://localhost:9008/update/'+id,{
+            method:'PUT',
+            headers:{
+                'Content-Type' : 'application/json; charset=utf-8',
+            },
+            body: JSON.stringify(free),
+        })
+        .then((res) => {
+            if(res.status === 200){
+                alert('글이 수정되었습니다.')
+                return res.json();
+            }else{
+                return null;
+            }
+        })
+        .then((res)=>{
+            if(res !== null){
+                props.history.push('/view/'+id);
+            }else{
+                alert('글 수정에 실패하였습니다.')
+            }
+        });
+
+    };
+~~~
+
+
+### 글 수정
+<div>
+  <img src="https://user-images.githubusercontent.com/19407579/69789626-44b36c80-1204-11ea-94ac-d53cf39954ff.gif">
+</div>
+<br>
+
+### boardpagination.js: rreact pagination 사용한 페이징 구현
+~~~JavaScript
+ <ReactPaginate
+          breakLabel="..."
+          nextLabel="next >"
+          onPageChange={handlePageClick}
+          pageRangeDisplayed={5}
+          pageCount={pageCount}
+          previousLabel="< previous"
+          renderOnZeroPageCount={null}
+          containerClassName="pagination"
+          pageLinkClassName="page-num"
+          previousLinkClassName="page-num"
+          nextLinkClassName="page-num"
+          activeLinkClassName="active"
+        />
+~~~
+
+### 페이징 구현 
+<div>
+  <img src="https://user-images.githubusercontent.com/19407579/69789626-44b36c80-1204-11ea-94ac-d53cf39954ff.gif">
+</div>
+<br>
+
+
+
  
 
 ------------------------------------------------------------------------------------------------------------------------------------------
 
-# 스프링으로 진행하며 느낀점
+# 스프링부트와 리액트로 진행하며 느낀점
 - jsp model2 mvc에 비해 의존성 주입을 활용한 어노테이션으로 객체 자동 생성이 편하다.
 - jsp model2 mvc에서 요청한 URL을 잘라서 String 변수command 를 통해  요청을 해결하는 것보다 @requestmapping 혹은
 @postmapping, @getmapping 한방으로 끝나는 요청 분기 나누는게 편하다.
