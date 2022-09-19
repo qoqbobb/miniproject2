@@ -77,10 +77,11 @@ public class FreeController {
  
 ### Restapi 리스트 테스트 (Postman)
 <div>
-  <img src="https://user-images.githubusercontent.com/19407579/69789626-44b36c80-1204-11ea-94ac-d53cf39954ff.gif">
+  <img src="https://user-images.githubusercontent.com/105841315/190950283-05e149f6-201c-4b7b-8208-dcfa0bd20096.gif">
 </div>
 
-<br>
+
+
 
 ### Restapi 수정 테스트 (Postman)
 <div>
