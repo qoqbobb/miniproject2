@@ -85,9 +85,10 @@ public class FreeController {
 
 ### Restapi 수정 테스트 (Postman)
 <div>
-  <img src="https://user-images.githubusercontent.com/19407579/69789626-44b36c80-1204-11ea-94ac-d53cf39954ff.gif">
+  <img src="https://user-images.githubusercontent.com/105841315/191146739-95cd4417-5fe7-405b-8b4a-9e0cdec1c357.gif">
 </div>
 <br>
+
 
 
 # 기능별 주요 로직 React 
@@ -141,9 +142,10 @@ const {data} = props;
 
 ### 리스트 구현 
 <div>
-  <img src="https://user-images.githubusercontent.com/19407579/69789626-44b36c80-1204-11ea-94ac-d53cf39954ff.gif">
+  <img src="https://user-images.githubusercontent.com/105841315/191147715-613da7e6-3e63-4eca-aae4-e813fde1e1af.png">
 </div>
 <br>
+
 
 ### update.js: 수정 페이지
 ~~~JavaScript
@@ -203,9 +205,10 @@ const Update = (props) =>{
 
 ### 글 수정
 <div>
-  <img src="https://user-images.githubusercontent.com/19407579/69789626-44b36c80-1204-11ea-94ac-d53cf39954ff.gif">
+  <img src="https://user-images.githubusercontent.com/105841315/191148843-167ebe6a-e688-4dab-be4d-8438bf874c72.gif">
 </div>
 <br>
+
 
 ### boardpagination.js: rreact pagination 사용한 페이징 구현
 ~~~JavaScript
@@ -227,9 +230,10 @@ const Update = (props) =>{
 
 ### 페이징 구현 
 <div>
-  <img src="https://user-images.githubusercontent.com/19407579/69789626-44b36c80-1204-11ea-94ac-d53cf39954ff.gif">
+  <img src="https://user-images.githubusercontent.com/105841315/191148441-8426f174-0886-41d7-a006-734cb0944f63.gif">
 </div>
 <br>
+
 
 
 
@@ -238,16 +242,10 @@ const Update = (props) =>{
 ------------------------------------------------------------------------------------------------------------------------------------------
 
 # 스프링부트와 리액트로 진행하며 느낀점
-- jsp model2 mvc에 비해 의존성 주입을 활용한 어노테이션으로 객체 자동 생성이 편하다.
-- jsp model2 mvc에서 요청한 URL을 잘라서 String 변수command 를 통해  요청을 해결하는 것보다 @requestmapping 혹은
-@postmapping, @getmapping 한방으로 끝나는 요청 분기 나누는게 편하다.
-- jsp model2 mvc의 preparedStatment 에 비해 월등히 편한 mybatis
-- junit의 단위테스트의 편리함. 꼭 실행화면에서 안해도 된다. was를 사용하지 않아도 되서 실행시간을 엄청 절감 할 수 있다.
-일반 main메소드에서 테스트를 한다고하면 해당 클래스를 만들고 메소드를 호출해야하는 번거로움 있다.
-그냥 junit 테스트코드에서 단위테스트하면 여러 메소드가 바로 이루어지고 junit탭에 정리가 되어서 나와 에러가 뜨면 바로바로 잡을수 있어서 좋았음.
-기능별로 하나의 단위테스트 모듈을 만들어 두면 두고두고 써먹을 수 있을 것 같다.
-- 권한에 따른 흐름제어를 내가 1부터 코딩 하는것이 아니고 spring security를 통해 쉽게 제어할 수 있다.
-- lombok을 통해 setter, getter, tostring 작성을 생략 가능해 편하다.
-
+- RestApi를 통해 url을 사용해 데이터를 전달해봤는데 체계적이고 편리해서 신기했다.
+- 스프링부트 JPA를 사용해 더욱 쉽게 DB의 테이블과 연결 또는 생성하고 쿼리문을 작성하지 않아도 되서 편리했다.
+- 스프링에서 사용하는 설정파일&라이브러리를 따로 추가하지 않아도 되서 스프링부트의 편리성을 느꼈다
+- 리액트에서 컴포넌트를 사용해 코드의 재사용을 용이하게 만들어 주는 것을 느꼈다
+- 
 
 ------------------------------------------------------------------------------------------------------------------------------------------
